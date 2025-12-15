@@ -1,4 +1,4 @@
-# Resume-to-JD Matcher with Automated Screening & QnA Trigger
+# Resume_to_JD Matcher with Automated Screening & QnA Trigger
 
 ## 📌 Problem Statement
 Manual resume screening is time-consuming, subjective, and error-prone. Recruiters often struggle to accurately identify candidates whose skills and experience align with a given job description (JD), especially when different terminologies are used.
@@ -146,11 +146,12 @@ This approach ensures:
 1. Clone the repository:
    ```bash
    git clone https://github.com/nazimaaa/resume_jd_matcher.git
-   cd resume-jd-matcher
+   cd resume_jd_matcher
 2. Install dependencies:
 pip install -r requirements.txt
 3. Run the application:
 python app.py
 4. Open a browser and visit:
 http://127.0.0.1:5000
+
 
