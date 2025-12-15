@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Match Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="result-box">
+        <h2>Match Score: {{ score }}%</h2>
+
+        {% if status == "Shortlisted" %}
+        <h3 class="status-pass">Status: {{ status }}</h3>
+        {% else %}
+        <h3 class="status-fail">Status: {{ status }}</h3>
+        {% endif %}
+
+        <h4>Resume Skills:</h4>
+        <p>{{ resume_skills }}</p>
+
+        <h4>JD Skills:</h4>
+        <p>{{ jd_skills }}</p>
+
+        <!-- ✅ EXPERIENCE MATCH SECTION -->
+        <h4>Experience Match:</h4>
+        <p>
+            Resume Experience: {{ resume_exp }} year(s)<br>
+            JD Requirement: {{ jd_exp }} year(s)
+        </p>
+
+        {% if status == "Shortlisted" %}
+        <h4>Interview Questions:</h4>
+        <ul>
+            {% for q in questions %}
+            <li>{{ q }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p><strong>Candidate not shortlisted. Interview questions not triggered.</strong></p>
+        {% endif %}
+
+        <!-- ✅ BACK BUTTON -->
+        <hr>
+        <form action="/" method="get">
+            <button type="submit" class="btn-back">
+                🔄 Scan Another Resume
+            </button>
+        </form>
+
+    </div>
+</body>
+
+</html>

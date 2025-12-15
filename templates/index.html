@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume–JD Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Resume to JD Matcher</h2>
+
+        <form action="/process" method="post" enctype="multipart/form-data">
+            <label>Upload Resume (PDF):</label>
+            <input type="file" name="resume" required>
+
+            <label>Paste Job Description:</label>
+            <textarea name="jd" rows="8" placeholder="Paste Job Description here..." required></textarea>
+
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+
+</html>
